@@ -1,0 +1,188 @@
+m.al faruq
+latihan pak nadir
+package com.belajar;
+latihan 1
+
+import javax.print.DocFlavor.STRING;
+
+public class latihan1 {
+    public static void main(String[] args) {
+        String nama = "FARUQ";
+        String kelas = "X PPLG 1";
+        double B_badan = 50;
+        System.out.println("Nama Saya : " +nama);
+        System.out.println("kelas : " +kelas);
+        System.out.println("berat badan : " +B_badan);
+
+
+    }
+}
+
+latihan 2
+
+public class latihan2 {
+   //menggunakan operator aritmatika
+    public static void main(String[] args) {
+        int a =10;
+        int b =20;
+        int c =25;
+        int d =30;
+        System.out.println("Hasil a + b = " + (a + b));
+        System.out.println("Hasil a + b = " + (a - b));
+        System.out.println("Hasil a * b = " + (a * b));
+        System.out.println("Hasil a / b = " + (b / a));
+        System.out.println("Hasil c % a = " + (c % a));
+        System.out.println("Hasil d % c = " + (d % c));
+
+    latihan 3
+
+package com.belajar;
+
+public class latihan3 {
+    //Menggunakan operator logika
+public static void main(String[] args) {
+    int A = 70;
+    int B = 80;
+    int C = 90;
+    boolean a = A > B && B < C || C < B;
+    boolean b = A < B || B < C && C < B;
+    System.out.println(a);
+    System.out.println(b);
+    
+
+}
+}
+
+latihan 4
+
+package com.belajar;
+import java.util.Scanner;
+
+
+public class latihan4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int pilihan;
+
+        do {
+            System.out.println("===== Kalkulator Luas =====");
+            System.out.println("1. Luas Persegi");
+            System.out.println("2. Luas Persegi Panjang");
+            System.out.println("3. Luas Lingkaran");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih menu (1-4): ");
+            pilihan = scanner.nextInt();
+
+            switch (pilihan) {
+                case 1:
+                    hitungLuasPersegi(scanner);
+                    break;
+                case 2:
+                    hitungLuasPersegiPanjang(scanner);
+                    break;
+                case 3:
+                    hitungLuasLingkaran(scanner);
+                    break;
+                case 4:
+                    System.out.println("Terima kasih telah menggunakan program ini!");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
+            }
+            System.out.println();
+        } while (pilihan != 4);
+
+        scanner.close();
+    }
+
+    public static void hitungLuasPersegi(Scanner scanner) {
+        System.out.print("Masukkan panjang sisi persegi: ");
+        double sisi = scanner.nextDouble();
+        double luas = sisi * sisi;
+        System.out.println("Luas persegi adalah: " + luas);
+    }
+
+    public static void hitungLuasPersegiPanjang(Scanner scanner) {
+        System.out.print("Masukkan panjang: ");
+        double panjang = scanner.nextDouble();
+        System.out.print("Masukkan lebar: ");
+        double lebar = scanner.nextDouble();
+        double luas = panjang * lebar;
+        System.out.println("Luas persegi panjang adalah: " + luas);
+    }
+
+    public static void hitungLuasLingkaran(Scanner scanner) {
+        System.out.print("Masukkan jari-jari lingkaran: ");
+        double jariJari = scanner.nextDouble();
+        double luas = Math.PI * jariJari * jariJari;
+        System.out.println("Luas lingkaran adalah: " + luas);
+    }
+}
+
+latihan 5
+
+package com.belajar;
+import java.util.Scanner;
+public class latihan5 {
+    public static void main(String[] args) {
+    //mengolah input data
+    //menggunakan class scanner
+    int NISN, Usia;
+    String Nama, Alamat;
+    Scanner Input = new Scanner(System.in);
+    System.out.println("data siswa");
+    System.out.println("----------");
+    System.out.print("NISN : ");
+    NISN = Input.nextInt(); 
+    System.out.print("Nama : ");
+    Nama = Input.next();
+    System.out.print("Alamat : ");
+    Alamat = Input.next();
+    System.out.print("Usia : ");
+    Usia = Input.nextInt();
+    //menampilkan data siswa
+    System.out.println("DATA SISWA");
+    System.out.println("---------");
+    System.out.println("NISN :" + NISN);
+    System.out.println("Nama :" + Nama);
+    System.out.println("Alamat :" + Alamat );
+    System.out.println("Usia :" + Usia);
+
+}
+    
+}
+
+latihan membuat data rumah sakit
+
+package com.belajar;
+
+import java.util.Scanner;
+
+public class gaduik {
+    public static void main(String[] args) {
+        //mendata pasien gaduik
+        int IdPasien, keluhan;
+        String NamaPasien, Alamat;
+        Scanner Input = new Scanner(System.in);
+        System.out.println("Data Pasien");
+        System.out.println("----------");
+        System.out.print("IdPasien : ");
+        IdPasien = Input.nextInt();
+        System.out.print("NamaPasien : ");
+        NamaPasien = Input.next();
+        System.out.print("Alamat : ");
+        Alamat = Input.next();
+        System.out.print("keluhan : ");
+        keluhan = Input.nextInt();
+        
+        // Menampilkan data pasien
+        System.out.println("Data pasien");
+        System.out.println("----------");
+        System.out.println("idPasien: " + IdPasien);
+        System.out.println("namaPasien: " + NamaPasien );
+        System.out.println("Alamat: " + Alamat);
+        System.out.println("keluhan: " + keluhan);
+
+        
+    }
+}
