@@ -1,0 +1,23 @@
+public class JadwalPelajaran {
+    public static void main(String[] args) {
+        // Array 2 dimensi: [Hari][Jam ke]
+        String[][] jadwal = {
+            // Jam ke:     1         2         3         4         5
+            {"Math",   "IPA",   "IPS",    "B.Indo", "Seni"},     // Senin
+            {"English","Math",  "PKN",    "IPA",    "Olahraga"}, // Selasa
+            {"IPA",    "IPS",   "Math",   "B.Indo", "English"},  // Rabu
+            {"PKN",    "Seni",  "IPA",    "IPS",    "B.Indo"},   // Kamis
+            {"English","Math",  "Seni",   "IPA",    "PKN"}       // Jumat
+        };
+
+        String[] hari = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat"};
+
+        for (int i = 0; i < jadwal.length; i++) {
+            System.out.println(hari[i] + ": ");
+            for (int j = 0; j < jadwal[i].length; j++) {
+                System.out.println("  Jam ke-" + (j + 1) + ": " + jadwal[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
